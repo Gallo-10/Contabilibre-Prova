@@ -1,15 +1,18 @@
 <?php
 require_once 'database.php';
 
-class Nota {
+class Nota
+{
     private $conn;
 
-    public function __construct() {
+    public function __construct()
+    {
         $db = new Database();
         $this->conn = $db->getConnection();
     }
 
-    public function criar($id_cliente, $numero_nota, $data_emissao, $valor) {
+    public function criar($id_cliente, $numero_nota, $data_emissao, $valor)
+    {
         try {
             echo "Iniciando inserção...<br>";
 
@@ -21,7 +24,7 @@ class Nota {
                 echo "Cliente não encontrado!";
                 return false;
             }
-    
+
             try {
                 $query = "INSERT INTO notas_fiscais (id_cliente, numero_nota, data_emissao, valor)
                           VALUES (:id_cliente, :numero_nota, :data_emissao, :valor)";
@@ -36,13 +39,7 @@ class Nota {
                 echo "Erro ao inserir nota fiscal: " . $e->getMessage();
                 return false;
             }
-    
-            echo "Dados vinculados: <br>";
-            echo "id_cliente = $id_cliente<br>";
-            echo "numero_nota = $numero_nota<br>";
-            echo "data_emissao = $data_emissao<br>";
-            echo "valor = $valor<br>";
-    
+
             if ($stmt->execute()) {
                 echo "Inserção bem-sucedida!<br>";
                 return $this->conn->lastInsertId();
@@ -56,6 +53,6 @@ class Nota {
             return false;
         }
     }
-    
+
 }
 ?>

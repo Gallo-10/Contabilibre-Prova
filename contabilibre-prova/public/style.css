@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h1,
+h2 {
+    color: #444;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+}
+
+form {
+    margin: 20px 0;
+}
+
+form input,
+form select,
+form button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+button[style="background-color: red;"] {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+button[style="background-color: red;"]:hover {
+    background-color: #c82333;
+}
+
+.clientes-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clientes-editar {
+    display: flex;
+    align-items: center;
+
+}
+
+.novo-cliente {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nova-nota {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.notas-cliente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
